@@ -28,8 +28,10 @@ The data splitting structure was 60/20/20 for training/validating/testing the mo
 
 Accuracy was the chosen metric and improved throughout the process. Despite much hyperparameter tuning, there were only two that made the best improvement: class weights and a higher number of trees.The official metric for DrivenData was classification rate (accuracy); however, class weights were included to improve performance against F1 score and provide a more useful real-world application where classification of the minority class (functional needs repair) would be essential.
 
-**Final random forest 10-fold cross-validation scores:**all features except one with class weights and 750 trees
-              precision    recall  f1-score   support
+**Final random forest 10-fold cross-validation scores:**
+- all features except one with class weights and 750 trees
+
+       genre  precision    recall  f1-score   support
 
        blues       0.42      0.25      0.31       921
      country       0.47      0.58      0.52      1089
@@ -42,7 +44,8 @@ Accuracy was the chosen metric and improved throughout the process. Despite much
 Validation accuracy:  0.4704140969162996
 
 **Test holdout**
-              precision    recall  f1-score   support
+
+       genre  precision    recall  f1-score   support
 
        blues       0.48      0.30      0.37       921
      country       0.47      0.60      0.53      1089
