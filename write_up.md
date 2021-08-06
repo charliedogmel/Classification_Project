@@ -26,10 +26,10 @@ Baseline models included k-Nearest Neighbors, logistic regression, Naive Bayes, 
   
 The data splitting structure was 60/20/20 for training/validating/testing the model. Many iterations were performed over many different feature combinations and hyperparameter tuning. The feature iterations included: the eight most important features being added one by one, only audio features plus release year, only LDA features plus release year, all features, and removed the least important features one by one. I also plotted the validation score of several hyperparameters in order to choose the best values. The test data was used only at the end after the model was finalized for a final estimate of generalization performance.
 
-Accuracy was the chosen metric and improved throughout the process. Despite much hyperparameter tuning, there were only two that made the best improvement: class weights and a higher number of trees.The official metric for DrivenData was classification rate (accuracy); however, class weights were included to improve performance against F1 score and provide a more useful real-world application where classification of the minority class (functional needs repair) would be essential.
+Accuracy was the chosen metric and improved throughout the process. Despite much hyperparameter tuning, there were only two that made the best improvement: class weights and a higher number of trees.
 
 **Final random forest 10-fold cross-validation scores:**
-- all features except one with class weights and 750 trees
+- all features with class weights and 750 trees
 
        genre  precision    recall  f1-score   support
 
